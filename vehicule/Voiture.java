@@ -28,6 +28,8 @@ public class Voiture extends Vehicule{
 	//La méthode calculePrix(int anneActuelle) en utilisant des getters et setters
 	@Override
 	public void calculePrix(int anneActuelle) {
+		//on garde les km de la voiture
+		double km = getKilometrage();
 		//moins 2% par an depuis l'année d'achat
 		for(int i = getDateAchat(); i < anneActuelle; i++) {
 			setPrixCourant(getPrixCourant() - (getPrixCourant() * 0.02));
@@ -53,6 +55,8 @@ public class Voiture extends Vehicule{
 		if (getPrixCourant() > getPrixAchat()){
 			setPrixCourant(getPrixAchat());
 		}
+		//on remet le km de la voiture
+		setKilometrage(km);
 	}
 
 	//toString en utilisant la méthode toString de la classe Vehicule

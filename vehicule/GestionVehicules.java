@@ -22,6 +22,19 @@ public class GestionVehicules {
 			hangar[i].calculePrix(2022);
 			hangar[i].affiche();
 		}
+
+		// Nous pouvons améliorer le main en créant un tableau de véhicules pour stocker les voitures et les avions
+		Vehicule[] garage2 = new Vehicule[5];
+		//on remplit donc garage2 de Voiture
+		garage2[0] = new Voiture("Peugeot", 2005, 13400.00, 1.4, 5, 4.0, 12000);
+		garage2[1] = new Voiture("Porsche", 2010, 160000.00, 3.6, 2, 25.0, 8320);
+		garage2[2] = new Voiture("Fiat", 1999, 8400.00, 1.2, 3, 5.0, 125000);
+		// et maintenant les avions 
+		garage2[3] = new Avion("Cessna", 1979, 204739.90, "HELICES", 250);
+		garage2[4] = new Avion("Gulfstream", 1993, 4321098.00, "REACTION", 1300);
+
+
+
 		
 	}
 	

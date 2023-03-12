@@ -31,6 +31,7 @@ public class Voiture extends Vehicule{
 		//on garde les km de la voiture
 		double km = getKilometrage();
 		//moins 2% par an depuis l'année d'achat
+		//j'ai préféré retirer les 2% par rapport à l'année précédente (cela paraît plus logique)
 		for(int i = getDateAchat(); i < anneActuelle; i++) {
 			setPrixCourant(getPrixCourant() - (getPrixCourant() * 0.02));
 		}

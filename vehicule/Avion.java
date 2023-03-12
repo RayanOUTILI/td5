@@ -43,6 +43,7 @@ public class Avion extends Vehicule{
 			}
 		}
 		else {
+			//on retire 10% du prix courant tous les 1000 heures de vol
 			tranche = 1000;
 			while(getHeuresVol() - tranche > 0){
 				setPrixCourant(getPrixCourant() - (getPrixCourant() * 0.10));
